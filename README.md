@@ -11,3 +11,8 @@ $ cd bp-test/
 $ vagrant up
 
 URL: http://localhost:8080
+
+Also need to look at this as a better option:
+
+https://github.com/ansible/ansible-container
+
