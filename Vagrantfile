@@ -74,7 +74,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :ansible_local do |ansible|
     ansible.playbook = "install-docker.yml"
 	if File.file?(".vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory")
-    ansible.inventory_path = ".vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory"
+      ansible.inventory_path = ".vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory"
     ansible.verbose = "v"
   end
 end
