@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
     apt-get update
     echo "#{ssh_public_key}" >> /home/vagrant/.ssh/authorized_keys
   SHELL
-  
+  end
   config.vm.provision :ansible_local do |ansible|
     ansible.playbook = "install-docker.yml"
 	    if File.file?(".vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory")
