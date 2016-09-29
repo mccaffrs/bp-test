@@ -16,8 +16,15 @@ Also need to look at this as a possible better option:
 
 https://github.com/ansible/ansible-container
 
+I have ansible installed in my cygwin environment:
 
-Ongoing problem trying to use vagrant with ansible provisioner from a windows machine:
+Steve@Steve-TOSH ~/bp-test
+$ ansible-playbook --version
+ansible-playbook 2.1.1.0
+  config file =
+  configured module search path = ['/opt/ansible/library']
+
+However, Ongoing problems trying to use vagrant with ansible provisioner from a windows machine:
 
 $ vagrant provision
 ==> default: Running provisioner: ansible...
