@@ -15,15 +15,13 @@ Vagrant.configure("2") do |config|
   # using a specific IP.
   config.vm.network "private_network", ip: "192.168.33.10"
 
+  config.vm.provision :ansible do |ansible|
+    ansible.playbook = "install-docker.yml"
+    ansible.verbose = "v"
+	
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
     echo "#{ssh_public_key}" >> /home/vagrant/.ssh/authorized_keys
   SHELL
-  end
-  config.vm.provision :ansible_local do |ansible|
-    ansible.playbook = "install-docker.yml"
-    if File.file?(".vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory")
-      ansible.inventory_path = ".vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory"
-    ansible.verbose = "v"
   end
 end
