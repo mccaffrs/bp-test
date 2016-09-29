@@ -12,6 +12,9 @@ $ vagrant up
 
 URL: http://localhost:8080
 
+To test: $ curl -s -o /dev/null -w "%{http_code}" http://localhost:8080
+I would use this in a script to check for 200 OK response codes.
+
 Also need to look at this as a possible better option:
 
 https://github.com/ansible/ansible-container
