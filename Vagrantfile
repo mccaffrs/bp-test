@@ -77,4 +77,3 @@ Vagrant.configure("2") do |config|
     ansible.inventory_path = ".vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory"
     ansible.verbose = "v"
   end
-end
