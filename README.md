@@ -20,6 +20,7 @@ I have ansible installed in my cygwin environment:
 
 Steve@Steve-TOSH ~/bp-test
 $ ansible-playbook --version
+
 ansible-playbook 2.1.1.0
   config file =
   configured module search path = ['/opt/ansible/library']
